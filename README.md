@@ -2,7 +2,13 @@
 
 Группа 2017-10
 
-### Автор 
+### Преподаватели
 Vitaly Chibrikov (Виталий Чибриков)
 
 chibrikov@otus.ru
+
+Dmitry Arkhangelskiy
+
+arhangeldim@otus.ru
+
+
