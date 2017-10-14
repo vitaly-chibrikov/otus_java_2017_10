@@ -7,7 +7,7 @@ Vitaly Chibrikov (Виталий Чибриков)
 
 chibrikov@otus.ru
 
-Dmitry Arkhangelskiy
+Dmitry Arkhangelskiy (Дмитрий Архангельский)
 
 arhangeldim@otus.ru
 
