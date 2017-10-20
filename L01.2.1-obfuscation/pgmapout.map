@@ -1,0 +1,238 @@
+com.google.common.base.ExtraObjectsMethodsForWeb -> a.a.a.a.a:
+com.google.common.base.Objects -> a.a.a.a.b:
+    boolean equal(java.lang.Object,java.lang.Object) -> a
+com.google.common.base.Preconditions -> a.a.a.a.c:
+    void checkArgument(boolean,java.lang.Object) -> a
+    java.lang.Object checkNotNull(java.lang.Object) -> a
+    int checkElementIndex(int,int) -> a
+    int checkPositionIndex(int,int) -> b
+    java.lang.String badPositionIndex(int,int,java.lang.String) -> a
+    void checkPositionIndexes(int,int,int) -> a
+    java.lang.String format(java.lang.String,java.lang.Object[]) -> a
+com.google.common.base.Predicate -> a.a.a.a.d:
+    boolean apply$5d527815() -> a
+    boolean test(java.lang.Object) -> test
+com.google.common.collect.AbstractIndexedListIterator -> a.a.a.b.a:
+    int size -> a
+    int position -> b
+    java.lang.Object get(int) -> a
+    void <init>(int,int) -> <init>
+    boolean hasNext() -> hasNext
+    java.lang.Object next() -> next
+    int nextIndex() -> nextIndex
+    boolean hasPrevious() -> hasPrevious
+    java.lang.Object previous() -> previous
+    int previousIndex() -> previousIndex
+com.google.common.collect.BiMap -> a.a.a.b.b:
+    java.util.Set values() -> a
+    java.util.Collection values() -> values
+com.google.common.collect.CollectPreconditions -> a.a.a.b.c:
+    java.util.List reverse(java.util.List) -> a
+    int indexOfImpl(java.util.List,java.lang.Object) -> a
+    int lastIndexOfImpl(java.util.List,java.lang.Object) -> b
+    java.util.Spliterator spliteratorImpl(com.google.common.collect.Multiset) -> a
+    java.util.Spliterator lambda$spliteratorImpl$2(com.google.common.collect.Multiset$Entry) -> a
+com.google.common.collect.CollectSpliterators$1FlatMapSpliterator -> a.a.a.b.d:
+    java.util.Spliterator prefix -> a
+    java.util.Spliterator from -> b
+    int characteristics -> c
+    long estimatedSize -> d
+    java.util.function.Function val$function -> e
+    void <init>(java.util.Spliterator,java.util.Spliterator,int,long,java.util.function.Function) -> <init>
+    boolean tryAdvance(java.util.function.Consumer) -> tryAdvance
+    void forEachRemaining(java.util.function.Consumer) -> forEachRemaining
+    java.util.Spliterator trySplit() -> trySplit
+    long estimateSize() -> estimateSize
+    int characteristics() -> characteristics
+    void lambda$forEachRemaining$1(java.util.function.Function,java.util.function.Consumer,java.lang.Object) -> a
+    void lambda$tryAdvance$0(java.util.function.Function,java.lang.Object) -> a
+com.google.common.collect.CollectSpliterators$1WithCharacteristics -> a.a.a.b.e:
+    java.util.Spliterator delegate -> a
+    int val$extraCharacteristics -> b
+    java.util.Comparator val$comparator -> c
+    void <init>(java.util.Spliterator,int,java.util.Comparator) -> <init>
+    boolean tryAdvance(java.util.function.Consumer) -> tryAdvance
+    void forEachRemaining(java.util.function.Consumer) -> forEachRemaining
+    java.util.Spliterator trySplit() -> trySplit
+    long estimateSize() -> estimateSize
+    int characteristics() -> characteristics
+    java.util.Comparator getComparator() -> getComparator
+com.google.common.collect.ImmutableCollection -> a.a.a.b.f:
+    java.lang.Object[] EMPTY_ARRAY -> a
+    void <init>() -> <init>
+    com.google.common.collect.UnmodifiableIterator iterator() -> a
+    java.util.Spliterator spliterator() -> spliterator
+    java.lang.Object[] toArray() -> toArray
+    java.lang.Object[] toArray(java.lang.Object[]) -> toArray
+    boolean add(java.lang.Object) -> add
+    boolean remove(java.lang.Object) -> remove
+    boolean addAll(java.util.Collection) -> addAll
+    boolean removeAll(java.util.Collection) -> removeAll
+    boolean removeIf(java.util.function.Predicate) -> removeIf
+    boolean retainAll(java.util.Collection) -> retainAll
+    void clear() -> clear
+    int copyIntoArray(java.lang.Object[],int) -> a
+    java.util.Iterator iterator() -> iterator
+    void <clinit>() -> <clinit>
+com.google.common.collect.ImmutableList -> a.a.a.b.g:
+    void <init>() -> <init>
+    com.google.common.collect.UnmodifiableIterator iterator() -> a
+    com.google.common.collect.UnmodifiableListIterator listIterator(int) -> a
+    void forEach(java.util.function.Consumer) -> forEach
+    int indexOf(java.lang.Object) -> indexOf
+    int lastIndexOf(java.lang.Object) -> lastIndexOf
+    boolean contains(java.lang.Object) -> contains
+    com.google.common.collect.ImmutableList subList(int,int) -> a
+    boolean addAll(int,java.util.Collection) -> addAll
+    java.lang.Object set(int,java.lang.Object) -> set
+    void add(int,java.lang.Object) -> add
+    java.lang.Object remove(int) -> remove
+    void replaceAll(java.util.function.UnaryOperator) -> replaceAll
+    void sort(java.util.Comparator) -> sort
+    java.util.Spliterator spliterator() -> spliterator
+    int copyIntoArray(java.lang.Object[],int) -> a
+    com.google.common.collect.ImmutableList reverse() -> b
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.util.Iterator iterator() -> iterator
+    java.util.List subList(int,int) -> subList
+    java.util.ListIterator listIterator(int) -> listIterator
+    java.util.ListIterator listIterator() -> listIterator
+com.google.common.collect.ImmutableList$1 -> a.a.a.b.h:
+    com.google.common.collect.ImmutableList this$0 -> a
+    void <init>(com.google.common.collect.ImmutableList,int,int) -> <init>
+    java.lang.Object get(int) -> a
+com.google.common.collect.ImmutableList$ReverseImmutableList -> a.a.a.b.i:
+    com.google.common.collect.ImmutableList forwardList -> a
+    void <init>(com.google.common.collect.ImmutableList) -> <init>
+    int reverseIndex(int) -> b
+    com.google.common.collect.ImmutableList reverse() -> b
+    boolean contains(java.lang.Object) -> contains
+    int indexOf(java.lang.Object) -> indexOf
+    int lastIndexOf(java.lang.Object) -> lastIndexOf
+    com.google.common.collect.ImmutableList subList(int,int) -> a
+    java.lang.Object get(int) -> get
+    int size() -> size
+    java.util.List subList(int,int) -> subList
+    java.util.ListIterator listIterator(int) -> listIterator
+    java.util.ListIterator listIterator() -> listIterator
+    java.util.Iterator iterator() -> iterator
+com.google.common.collect.ImmutableList$SubList -> a.a.a.b.j:
+    int offset -> a
+    int length -> b
+    com.google.common.collect.ImmutableList this$0 -> c
+    void <init>(com.google.common.collect.ImmutableList,int,int) -> <init>
+    int size() -> size
+    java.lang.Object get(int) -> get
+    com.google.common.collect.ImmutableList subList(int,int) -> a
+    java.util.List subList(int,int) -> subList
+    java.util.ListIterator listIterator(int) -> listIterator
+    java.util.ListIterator listIterator() -> listIterator
+    java.util.Iterator iterator() -> iterator
+com.google.common.collect.Iterators$9 -> a.a.a.b.k:
+    boolean done -> a
+    java.lang.Object val$value -> b
+    void <init>(java.lang.Object) -> <init>
+    boolean hasNext() -> hasNext
+    java.lang.Object next() -> next
+com.google.common.collect.Iterators$ArrayItr -> a.a.a.b.l:
+    com.google.common.collect.UnmodifiableListIterator EMPTY -> a
+    java.lang.Object[] array -> b
+    int offset -> c
+    void <init>(java.lang.Object[],int,int,int) -> <init>
+    java.lang.Object get(int) -> a
+    void <clinit>() -> <clinit>
+com.google.common.collect.Lists$RandomAccessReverseList -> a.a.a.b.m:
+    void <init>(java.util.List) -> <init>
+com.google.common.collect.Lists$ReverseList -> a.a.a.b.n:
+    java.util.List forwardList -> a
+    void <init>(java.util.List) -> <init>
+    java.util.List getForwardList() -> a
+    int reverseIndex(int) -> a
+    int reversePosition(int) -> b
+    void add(int,java.lang.Object) -> add
+    void clear() -> clear
+    java.lang.Object remove(int) -> remove
+    void removeRange(int,int) -> removeRange
+    java.lang.Object set(int,java.lang.Object) -> set
+    java.lang.Object get(int) -> get
+    int size() -> size
+    java.util.List subList(int,int) -> subList
+    java.util.Iterator iterator() -> iterator
+    java.util.ListIterator listIterator(int) -> listIterator
+    int access$000(com.google.common.collect.Lists$ReverseList,int) -> a
+com.google.common.collect.Lists$ReverseList$1 -> a.a.a.b.o:
+    boolean canRemoveOrSet -> a
+    java.util.ListIterator val$forwardIterator -> b
+    com.google.common.collect.Lists$ReverseList this$0 -> c
+    void <init>(com.google.common.collect.Lists$ReverseList,java.util.ListIterator) -> <init>
+    void add(java.lang.Object) -> add
+    boolean hasNext() -> hasNext
+    boolean hasPrevious() -> hasPrevious
+    java.lang.Object next() -> next
+    int nextIndex() -> nextIndex
+    java.lang.Object previous() -> previous
+    int previousIndex() -> previousIndex
+    void remove() -> remove
+    void set(java.lang.Object) -> set
+com.google.common.collect.Multiset -> a.a.a.b.p:
+    int size() -> size
+    java.util.Set entrySet() -> a
+    void forEach(java.util.function.Consumer) -> forEach
+    java.util.Spliterator spliterator() -> spliterator
+    void lambda$forEach$1(java.util.function.Consumer,com.google.common.collect.Multiset$Entry) -> a
+com.google.common.collect.Multiset$Entry -> a.a.a.b.q:
+    java.lang.Object getElement() -> a
+    int getCount() -> b
+com.google.common.collect.RegularImmutableList -> a.a.a.b.r:
+    com.google.common.collect.ImmutableList EMPTY -> a
+    java.lang.Object[] array -> b
+    void <init>(java.lang.Object[]) -> <init>
+    int size() -> size
+    int copyIntoArray(java.lang.Object[],int) -> a
+    java.lang.Object get(int) -> get
+    com.google.common.collect.UnmodifiableListIterator listIterator(int) -> a
+    java.util.Spliterator spliterator() -> spliterator
+    java.util.ListIterator listIterator(int) -> listIterator
+    void <clinit>() -> <clinit>
+com.google.common.collect.SingletonImmutableList -> a.a.a.b.s:
+    java.lang.Object element -> a
+    void <init>(java.lang.Object) -> <init>
+    java.lang.Object get(int) -> get
+    com.google.common.collect.UnmodifiableIterator iterator() -> a
+    java.util.Spliterator spliterator() -> spliterator
+    int size() -> size
+    com.google.common.collect.ImmutableList subList(int,int) -> a
+    java.lang.String toString() -> toString
+    java.util.List subList(int,int) -> subList
+    java.util.Iterator iterator() -> iterator
+com.google.common.collect.UnmodifiableIterator -> a.a.a.b.t:
+    void <init>() -> <init>
+    void remove() -> remove
+com.google.common.collect.UnmodifiableListIterator -> a.a.a.b.u:
+    void <init>() -> <init>
+    void add(java.lang.Object) -> add
+    void set(java.lang.Object) -> set
+com.google.common.util.concurrent.ListenableFuture -> a.a.a.c.a.a:
+com.google.common.util.concurrent.ListenableScheduledFuture -> a.a.a.c.a.b:
+com.google.common.util.concurrent.ListeningExecutorService -> a.a.a.c.a.c:
+    com.google.common.util.concurrent.ListenableFuture submit$2d4c8362() -> a
+    com.google.common.util.concurrent.ListenableFuture submit$761afc7() -> b
+    com.google.common.util.concurrent.ListenableFuture submit$71dba6d5() -> c
+    java.util.concurrent.Future submit(java.lang.Runnable) -> submit
+    java.util.concurrent.Future submit(java.lang.Runnable,java.lang.Object) -> submit
+    java.util.concurrent.Future submit(java.util.concurrent.Callable) -> submit
+com.google.common.util.concurrent.ListeningScheduledExecutorService -> a.a.a.c.a.d:
+    com.google.common.util.concurrent.ListenableScheduledFuture schedule$638d6850() -> d
+    com.google.common.util.concurrent.ListenableScheduledFuture schedule$5c4f46a7() -> e
+    com.google.common.util.concurrent.ListenableScheduledFuture scheduleAtFixedRate$3d1fe72() -> f
+    com.google.common.util.concurrent.ListenableScheduledFuture scheduleWithFixedDelay$3d1fe72() -> g
+    java.util.concurrent.ScheduledFuture scheduleWithFixedDelay(java.lang.Runnable,long,long,java.util.concurrent.TimeUnit) -> scheduleWithFixedDelay
+    java.util.concurrent.ScheduledFuture scheduleAtFixedRate(java.lang.Runnable,long,long,java.util.concurrent.TimeUnit) -> scheduleAtFixedRate
+    java.util.concurrent.ScheduledFuture schedule(java.util.concurrent.Callable,long,java.util.concurrent.TimeUnit) -> schedule
+    java.util.concurrent.ScheduledFuture schedule(java.lang.Runnable,long,java.util.concurrent.TimeUnit) -> schedule
+ru.otus.l0111.Main -> ru.otus.l0111.Main:
+    void <init>() -> <init>
+    void main(java.lang.String[]) -> main
+    void calcTime(java.lang.Runnable) -> a
+    void lambda$main$0(java.util.List,java.util.Collection) -> a
