@@ -1,0 +1,46 @@
+// Apply the java-library plugin to add support for Java Library
+apply plugin: 'java-library'
+apply plugin: 'maven'
+
+group = 'otus'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    // https://mvnrepository.com/artifact/com.carrotsearch/java-sizeof
+    compile group: 'com.carrotsearch', name: 'java-sizeof', version: '0.0.5'
+    // https://mvnrepository.com/artifact/org.openjdk.jol/jol-core
+    compile group: 'org.openjdk.jol', name: 'jol-core', version: '0.9'
+    // https://mvnrepository.com/artifact/org.jetbrains/annotations
+    compile group: 'org.jetbrains', name: 'annotations', version: '15.0'
+    // https://mvnrepository.com/artifact/javassist/javassist
+    compile group: 'javassist', name: 'javassist', version: '3.12.1.GA'
+
+
+
+}
+
+task mainJar(type: Jar) {
+    appendix = 'main'
+
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }}
+    with jar
+}
+
+task agentJar(type: Jar) {
+    appendix = 'agent'
+    manifest {
+        attributes(
+                "Premain-class": "agent.SimpleAgent",
+                "Agent-class": "agent.SimpleAgent"
+        )
+    }
+    from(sourceSets.main.output) {
+        include "agent/**"
+    }
+
+//    with jar
+}
