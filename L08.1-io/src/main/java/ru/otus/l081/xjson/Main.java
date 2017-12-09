@@ -1,4 +1,4 @@
-package ru.otus.l81.xjson;
+package ru.otus.l081.xjson;
 
 
 import javax.json.*;

@@ -1,4 +1,4 @@
-package ru.otus.l81.gson;
+package ru.otus.l081.gson;
 
 /**
  * Created by tully.
