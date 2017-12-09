@@ -7,7 +7,7 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        new Main().writeObject();
+        //new Main().writeObject();
         new Main().writeTextFile();
     }
 
@@ -17,6 +17,7 @@ public class Main {
         String file = "student.out";
 
         JavaIOHelper.writeObject(file, student);
+
         Person readStudent1 = JavaIOHelper.readObject(file, Person.class);
         System.out.println(readStudent1);
 

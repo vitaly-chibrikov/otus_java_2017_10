@@ -10,7 +10,7 @@ public class Main {
         BagOfPrimitives obj = new BagOfPrimitives(22, "test", 10);
         System.out.println(obj);
         Gson gson = new Gson();
-        String json = gson.toJson("Test");
+        String json = gson.toJson(obj);
         System.out.println(json);
 
         BagOfPrimitives obj2 = gson.fromJson(json, BagOfPrimitives.class);
