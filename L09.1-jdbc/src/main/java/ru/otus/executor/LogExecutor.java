@@ -1,6 +1,6 @@
 package ru.otus.executor;
 
-import ru.otus.log.ResultHandler;
+import ru.otus.logger.ResultHandler;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

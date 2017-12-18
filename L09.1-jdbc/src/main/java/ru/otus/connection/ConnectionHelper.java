@@ -15,7 +15,7 @@ class ConnectionHelper {
                     "3306/" +                    //port
                     "db_example?" +              //db name
                     "user=tully&" +              //login
-                    "password=tully&" +           //password
+                    "password=tully&" +          //password
 
                     "useSSL=false";             //do not use Secure Sockets Layer
 

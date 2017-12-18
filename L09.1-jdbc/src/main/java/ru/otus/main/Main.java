@@ -4,7 +4,7 @@ import ru.otus.base.DBService;
 import ru.otus.base.UsersDataSet;
 import ru.otus.connection.DBServiceConnection;
 import ru.otus.connection.DBServiceUpdate;
-import ru.otus.log.DBServiceLog;
+import ru.otus.logger.DBServiceLog;
 import ru.otus.prepared.DBServicePrepared;
 import ru.otus.simple.DBServiceSimple;
 import ru.otus.transaction.DBServicePreparedTransactional;

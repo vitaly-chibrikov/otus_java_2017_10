@@ -1,7 +1,7 @@
 package ru.otus.simple;
 
 import ru.otus.executor.TExecutor;
-import ru.otus.log.DBServiceLog;
+import ru.otus.logger.DBServiceLog;
 
 import java.sql.SQLException;
 
