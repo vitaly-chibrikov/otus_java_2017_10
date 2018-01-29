@@ -11,7 +11,7 @@
                 minutes = '0' + minutes;
             if (seconds < 10)
                 seconds = '0' + seconds;
-            document.getElementById('ClientTime').innerHTML = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('ClientTime').innerHTML = hours + '*' + minutes + '*' + seconds;
         }
         function refresh() {
             location.reload();

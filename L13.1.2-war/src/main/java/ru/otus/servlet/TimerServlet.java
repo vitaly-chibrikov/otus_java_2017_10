@@ -20,7 +20,7 @@ public class TimerServlet extends HttpServlet {
 
     private static final int PERIOD_MS = 1000;
 
-    private final TimeService timeService = TimeService.instance();
+    private final TimeServiceSingleton timeService = TimeServiceSingleton.instance();
 
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response) throws ServletException, IOException {

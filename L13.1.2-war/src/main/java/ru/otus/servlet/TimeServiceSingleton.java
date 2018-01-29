@@ -7,19 +7,19 @@ import java.util.Date;
 /**
  * Created by tully.
  */
-public class TimeService {
-    private static final String DEFAULT_PATTERN = "HH:mm:ss";
-    private static TimeService timeService;
+public class TimeServiceSingleton {
+    private static final String DEFAULT_PATTERN = "HH#mm#ss";
+    private static TimeServiceSingleton timeService;
 
     private final String pattern;
 
-    private TimeService(String pattern) {
+    private TimeServiceSingleton(String pattern) {
         this.pattern = pattern;
     }
 
-    public static TimeService instance() {
+    public static TimeServiceSingleton instance() {
         if (timeService == null) {
-            timeService = new TimeService(DEFAULT_PATTERN);
+            timeService = new TimeServiceSingleton(DEFAULT_PATTERN);
         }
         return timeService;
     }
