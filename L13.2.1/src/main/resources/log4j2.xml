@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <!--
+            d - Дата/время
+            p - Уровень логирования
+            t - Имя потока
+            C - Полное имя класса
+            x - контекст
+            m - сообщение
+            n - /n
+            -->
+            <PatternLayout pattern="%d %-5p [%t] %C{2} %x - %m%n"/>
+        </Console>
+
+        <RollingFile name="POTOM_RAZBEREMSYA" fileName="daily.log" filePattern="%d{ddMMyyyy-HHmm}_daily.log">
+            <PatternLayout pattern="%d [%7r] %5p - %c - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingFile>
+
+    </Appenders>
+    <Loggers>
+        <Root level="error">
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+
+        <!--additivity=false-->
+        <Logger name="ru.otus" level="info">
+            <AppenderRef ref="POTOM_RAZBEREMSYA"/>
+        </Logger>
+
+        <Logger name="org.eclipse.jetty" level="debug"/>
+
+    </Loggers>
+</Configuration>
