@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %-5p [%t] %C{2} %x - %m%n"/>
+        </Console>
+        <File name="commonOut" fileName="output.log" bufferedIO="false">
+            <PatternLayout pattern="%d %-5p [%t] %C{2} %x - %m%n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="ru.otus" level="info">
+            <AppenderRef ref="commonOut"/>
+        </Logger>
+        <Logger name="org.springframework" level="info" additivity="false">
+            <AppenderRef ref="commonOut"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+</Configuration>
