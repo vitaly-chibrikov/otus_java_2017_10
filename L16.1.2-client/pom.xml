@@ -17,11 +17,6 @@
     <dependencies>
         <dependency>
             <groupId>ru.otus</groupId>
-            <artifactId>L16.1.1</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>ru.otus</groupId>
             <artifactId>L16.1.1-server</artifactId>
             <version>1.0</version>
         </dependency>

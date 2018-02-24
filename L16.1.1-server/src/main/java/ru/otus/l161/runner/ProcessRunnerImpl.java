@@ -34,8 +34,8 @@ public class ProcessRunnerImpl implements ProcessRunner {
         Process p = pb.start();
 
         StreamListener output = new StreamListener(p.getInputStream(), "OUTPUT");
-
         output.start();
+
         return p;
     }
 

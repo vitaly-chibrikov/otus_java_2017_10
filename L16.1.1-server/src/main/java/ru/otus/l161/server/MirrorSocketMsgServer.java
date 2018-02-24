@@ -2,6 +2,7 @@ package ru.otus.l161.server;
 
 import ru.otus.l161.app.Msg;
 import ru.otus.l161.app.MsgWorker;
+import ru.otus.l161.channel.Blocks;
 import ru.otus.l161.channel.SocketMsgWorker;
 
 import java.net.ServerSocket;
@@ -31,6 +32,7 @@ public class MirrorSocketMsgServer implements MirrorSocketMsgServerMBean {
         clients = new CopyOnWriteArrayList<>();
     }
 
+    @Blocks
     public void start() throws Exception {
         executor.submit(this::mirror);
 

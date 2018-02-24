@@ -6,5 +6,5 @@ import java.lang.annotation.*;
 @Inherited
 @Retention(RetentionPolicy.SOURCE)
 @Target(ElementType.METHOD)
-@interface Blocks {
+public @interface Blocks {
 }

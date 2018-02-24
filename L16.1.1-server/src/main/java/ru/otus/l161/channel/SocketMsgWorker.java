@@ -63,6 +63,20 @@ public class SocketMsgWorker implements MsgWorker {
     }
 
     @Blocks
+    private void sendMessage() {
+        try (PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
+            while (socket.isConnected()) {
+                Msg msg = output.take(); //blocks
+                String json = new Gson().toJson(msg);
+                out.println(json);
+                out.println();//line with json + an empty line
+            }
+        } catch (InterruptedException | IOException e) {
+            logger.log(Level.SEVERE, e.getMessage());
+        }
+    }
+
+    @Blocks
     private void receiveMessage() {
         try (BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
             String inputLine;
@@ -81,20 +95,6 @@ public class SocketMsgWorker implements MsgWorker {
             logger.log(Level.SEVERE, e.getMessage());
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        }
-    }
-
-    @Blocks
-    private void sendMessage() {
-        try (PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
-            while (socket.isConnected()) {
-                Msg msg = output.take(); //blocks
-                String json = new Gson().toJson(msg);
-                out.println(json);
-                out.println();//line with json + an empty line
-            }
-        } catch (InterruptedException | IOException e) {
-            logger.log(Level.SEVERE, e.getMessage());
         }
     }
 
