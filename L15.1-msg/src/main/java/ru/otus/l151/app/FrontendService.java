@@ -1,9 +1,11 @@
 package ru.otus.l151.app;
 
+import ru.otus.l151.messageSystem.Addressee;
+
 /**
  * Created by tully.
  */
-public interface FrontendService {
+public interface FrontendService extends Addressee {
     void init();
 
     void handleRequest(String login);

@@ -14,10 +14,16 @@ import java.util.logging.Logger;
 public final class MessageSystem {
     private final static Logger logger = Logger.getLogger(MessageSystem.class.getName());
     private static final int DEFAULT_STEP_TIME = 10;
-    private final List<Thread> pool = new ArrayList<>();
 
-    private final Map<Address, ConcurrentLinkedQueue<Message>> messagesMap = new HashMap<>();
-    private final Map<Address, Addressee> addresseeMap = new HashMap<>();
+    private final List<Thread> workers;
+    private final Map<Address, ConcurrentLinkedQueue<Message>> messagesMap;
+    private final Map<Address, Addressee> addresseeMap;
+
+    public MessageSystem() {
+        workers = new ArrayList<>();
+        messagesMap = new HashMap<>();
+        addresseeMap = new HashMap<>();
+    }
 
     public void addAddressee(Addressee addressee) {
         addresseeMap.put(addressee.getAddress(), addressee);
@@ -54,11 +60,11 @@ public final class MessageSystem {
             });
             thread.setName(name);
             thread.start();
-            pool.add(thread);
+            workers.add(thread);
         }
     }
 
-    public void dispose(){
-        pool.forEach(Thread::interrupt);
+    public void dispose() {
+        workers.forEach(Thread::interrupt);
     }
 }
